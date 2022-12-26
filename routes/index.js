@@ -10,8 +10,8 @@ const NotFoundError = require('../utils/errors/NotFoundError'); // 404
 router.post('/signin', validateLogin, login);
 router.post('/signup', validateUserCreate, createUser);
 router.use(auth);
-router.use('./movies', moviesRouter);
-router.use('./users', usersRouter);
-router.use('*', () => { throw new NotFoundError('По вашему запросу ничего не найдено'); });
+router.use('/movies', moviesRouter);
+router.use('/users', usersRouter);
+router.use('*', () => { throw new NotFoundError('Page not found'); });
 
 module.exports = router;

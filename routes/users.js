@@ -4,8 +4,8 @@ const {
 } = require('../controllers/users');
 const { validateProfileUpdate } = require('../middlewares/userValidation');
 
-router.get('/users/me', getCurrentUser);
+router.get('/me', getCurrentUser);
 
-router.patch('/users/me', validateProfileUpdate, updateProfile);
+router.patch('/me', validateProfileUpdate, updateProfile);
 
 module.exports = router;
