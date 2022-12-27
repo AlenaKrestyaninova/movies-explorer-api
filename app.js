@@ -21,7 +21,7 @@ const options = {
   credentials: true,
 };
 
-const { PORT = 3000, MONGO_URL } = process.env;
+const { PORT = 3000, MONGO_URL = 'mongodb://localhost:27017/bitfilmsdb' } = process.env;
 
 mongoose.set('strictQuery', true);
 mongoose.connect(MONGO_URL);
